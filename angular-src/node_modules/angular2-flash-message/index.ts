@@ -1,0 +1,1 @@
+export * from './module/angular2-flash-message';
