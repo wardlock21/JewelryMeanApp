@@ -1,6 +1,6 @@
 <div class="jumbotron text-center">
-  <h1>MEAN Authentication App</h1>
-  <p class="lead">Welcome to our custom MEAN authentication application built from scratch</p>
+  <h1>MEAN App</h1>
+  <p class="lead">Welcome to our custom MEAN application built for Jewellery Store</p>
   <div>
     <a class="btn btn-primary" *ngIf="!authService.loggedIn()" [routerLink]="['/register']">Register</a> <a class="btn btn-dark"*ngIf="!authService.loggedIn()" [routerLink]="['/login']">Login</a>
   </div>
@@ -8,15 +8,42 @@
 
 <div class="row">
   <div class="col-md-4">
-    <h3>Express Backend</h3>
-    <p>A rock solid Node.js/Express server using Mongoose to organize models and query the database</p>
+    <h3>Rings</h3>
+    <div class="card mb-4 box-shadow">
+      <img class="card-img-top" src="../../../assets/images/rings.jpeg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little
+          bit longer.</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <button type="button" class="btn btn-dark btn-lg btn-block" [routerLink]="['/products']">Shop</button>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="col-md-4">
-    <h3>Angular-CLI</h3>
-    <p>Angular-CLI to generate components, services and more. Local dev server and easy compilation</p>
+    <h3>Neckless</h3>
+    <div class="card mb-4 box-shadow">
+      <img class="card-img-top" src="../../../assets/images/neck.jpeg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little
+          bit longer.</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <button type="button" class="btn btn-dark btn-lg btn-block" [routerLink]="['/products']">Shop</button>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="col-md-4">
-    <h3>JWT Tokens</h3>
-    <p>Full featured authentication using JSON web tokens. Login and store user data</p>
+    <h3>Bracelet</h3>
+    <div class="card mb-4 box-shadow">
+    <img class="card-img-top" src="../../../assets/images/bracelet.jpeg" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little
+          bit longer.</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <button type="button" class="btn btn-dark btn-lg btn-block" [routerLink]="['/products']">Shop</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,0 +1,20 @@
+<h2 class="page-header">Add Product</h2>
+<form (submit)="onProductSubmit()">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" [(ngModel)]="name" name="name" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Image Source</label>
+    <input type="text" [(ngModel)]="img" name="img" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>description</label>
+    <input type="text" [(ngModel)]="description" name="description" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Category</label>
+    <input type="text" [(ngModel)]="Catag" name="Catag" class="form-control">
+  </div>
+  <input type="submit" class="btn btn-primary" value="Submit">
+</form>

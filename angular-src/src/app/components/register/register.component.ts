@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
   username: String;
   email: String;
   password: String;
+  role:String;
 
   constructor(private validateService: ValidateService, private flashMessage:FlashMessagesService,
     private authservice:AuthService,
@@ -27,7 +28,8 @@ export class RegisterComponent implements OnInit {
       name: this.name,
       email: this.email,
       username: this.username,
-      password: this.password
+      password: this.password,
+      role: 'users'
     }
 
     // Required Fields
