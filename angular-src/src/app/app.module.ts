@@ -22,6 +22,7 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { CollapseModule } from 'ngx-bootstrap';
 
 
 const appRoutes: Routes =  [
@@ -59,7 +60,7 @@ const appRoutes: Routes =  [
     NgbModule.forRoot(),
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    
+    CollapseModule,
   ],
   providers: [ValidateService,AuthService,AuthGuard],
   bootstrap: [AppComponent]

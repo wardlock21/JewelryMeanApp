@@ -17,13 +17,13 @@ export class AuthService {
   registerUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('users/register', user, { headers: headers })
+    return this.http.post('http://localhost:3000/users/register', user, { headers: headers })
       .map(res => res.json());
   };
   authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('users/authenticate', user, { headers: headers })
+    return this.http.post('http://localhost:3000/users/authenticate', user, { headers: headers })
       .map(res => res.json());
   }
   getProfile() {
@@ -32,7 +32,7 @@ export class AuthService {
 
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('users/profile', { headers: headers })
+    return this.http.get('http://localhost:3000/users/profile', { headers: headers })
       .map(res => res.json());
   }
 
@@ -50,7 +50,7 @@ export class AuthService {
 
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.post('users/addproduct', product, { headers: headers })
+    return this.http.post('http://localhost:3000/users/addproduct', product, { headers: headers })
       .map(res => res.json());
   }
 
@@ -60,7 +60,7 @@ export class AuthService {
 
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.put('users/editproduct', product, { headers: headers })
+    return this.http.put('http://localhost:3000/users/editproduct', product, { headers: headers })
       .map(res => res.json());
   }
 
@@ -71,7 +71,7 @@ export class AuthService {
 
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.delete('users/deleteproduct/' + productID, { headers: headers })
+    return this.http.delete('http://localhost:3000/users/deleteproduct/' + productID, { headers: headers })
       .map(res => res.json());
   }
 
