@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h4 class="mb-3">Billing address</h4>
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">First name</label>
+            <input type="text" class="form-control" [(ngModel)]="firstName" name="firstName" placeholder="" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control" [(ngModel)]="lastName" name="lastName" placeholder="" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email
+            <span class="text-muted">(Optional)</span>
+          </label>
+          <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" placeholder="you@example.com">
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Address</label>
+          <input type="text" class="form-control" id="address" [(ngModel)]="Address" name="Address" placeholder="1234 Main St" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="address2">Address 2
+            <span class="text-muted">(Optional)</span>
+          </label>
+          <input type="text" class="form-control" id="address2" [(ngModel)]="address2" name="address2" placeholder="Apartment or suite">
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="State">State</label>
+            <input type="text" class="form-control" [(ngModel)]="state" name="state" placeholder="" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="City">City</label>
+            <input type="text" class="form-control" [(ngModel)]="city" name="city" placeholder="" required>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="zip">Zip</label>
+            <input type="text" class="form-control" [(ngModel)]="zip" name="zip" placeholder="" required>
+          </div>
+        </div>
+        
+        <hr class="mb-4">
+
+        <h4 class="mb-3">Payment</h4>
+
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked [(ngModel)]="paymentMethod" required>
+            <label class="custom-control-label" for="credit">Credit card</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" [(ngModel)]="paymentMethod" required>
+            <label class="custom-control-label" for="debit">Debit card</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cc-name">Name on card</label>
+            <input type="text" class="form-control" [(ngModel)]="ccname" name="ccname" placeholder="" required>
+            <small class="text-muted">Full name as displayed on card</small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-number">Credit/Debit card number</label>
+            <input type="text" class="form-control" [(ngModel)]="ccnumber" name="ccnumber" placeholder="" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="cc-expiration">Expiration</label>
+            <input type="text" class="form-control" [(ngModel)]="ccexpiration" name="ccexpiration" placeholder="" required>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="cc-expiration">CVV</label>
+            <input type="text" class="form-control" [(ngModel)]="cccvv" name="cccvv" placeholder="" required>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="button" (click)="orderPlaced()">Continue to checkout</button>
+      </form>
+    </div>
+  </div>
+</div>

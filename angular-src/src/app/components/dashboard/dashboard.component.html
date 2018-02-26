@@ -32,7 +32,7 @@
                     <button type="button" class="btn btn-danger btn-lg btn-block" (click)="onDeleteProduct(product)">Delete</button>
                   </div>
                 </div>
-                <button type="button" *ngIf="authService.loggedIn() && !authService.userRole()" class="btn btn-dark btn-lg btn-block">Add to cart</button>
+                <button type="button" *ngIf="authService.loggedIn() && !authService.userRole()" class="btn btn-dark btn-lg btn-block" (click)="onAddProductToCart(product)">Add to cart</button>
               </div>
             </div>
           </div>
@@ -45,23 +45,23 @@
       <div *ngIf="products">
         <div class="row ">
           <div *ngFor="let product of necks" class="col-md-4">
-              <img class="card-img-top" src="{{product.img}}" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">{{product.name}}</h5>
-                <p class="card-text">{{product.description}}</p>
-                <button type="button" *ngIf="!authService.loggedIn()" class="btn btn-dark btn-lg btn-block" [routerLink]="['/login']">Shop</button>
-                <div class="row" *ngIf="authService.loggedIn() && authService.userRole()">
-                  <div class="col-xs-12 col-md-6">
-                    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="onEditProduct(product)">Edit</button>
-                  </div>
-                  <div class="col-xs-12 col-md-6">
-                    <button type="button" class="btn btn-danger btn-lg btn-block" (click)="onDeleteProduct(product)">Delete</button>
-                  </div>
+            <img class="card-img-top" src="{{product.img}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{product.name}}</h5>
+              <p class="card-text">{{product.description}}</p>
+              <button type="button" *ngIf="!authService.loggedIn()" class="btn btn-dark btn-lg btn-block" [routerLink]="['/login']">Shop</button>
+              <div class="row" *ngIf="authService.loggedIn() && authService.userRole()">
+                <div class="col-xs-12 col-md-6">
+                  <button type="button" class="btn btn-primary btn-lg btn-block" (click)="onEditProduct(product)">Edit</button>
                 </div>
-                <button type="button" *ngIf="authService.loggedIn() && !authService.userRole()" class="btn btn-dark btn-lg btn-block">Add to cart</button>
+                <div class="col-xs-12 col-md-6">
+                  <button type="button" class="btn btn-danger btn-lg btn-block" (click)="onDeleteProduct(product)">Delete</button>
+                </div>
               </div>
+              <button type="button" *ngIf="authService.loggedIn() && !authService.userRole()" class="btn btn-dark btn-lg btn-block" (click)="onAddProductToCart(product)">Add to cart</button>
             </div>
-         
+          </div>
+
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@
                     <button type="button" class="btn btn-danger btn-lg btn-block" (click)="onDeleteProduct(product)">Delete</button>
                   </div>
                 </div>
-                <button type="button" *ngIf="authService.loggedIn() && !authService.userRole()" class="btn btn-dark btn-lg btn-block">Add to cart</button>
+                <button type="button" *ngIf="authService.loggedIn() && !authService.userRole()" class="btn btn-dark btn-lg btn-block" (click)="onAddProductToCart(product)">Add to cart</button>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@
                     <button type="button" class="btn btn-danger btn-lg btn-block" (click)=" onDeleteProduct(product)">Delete</button>
                   </div>
                 </div>
-                <button type="button" *ngIf="authService.loggedIn() && !authService.userRole()" class="btn btn-dark btn-lg btn-block">Add to cart</button>
+                <button type="button" *ngIf="authService.loggedIn() && !authService.userRole()" class="btn btn-dark btn-lg btn-block" (click)="onAddProductToCart(product)">Add to cart</button>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@
                     <button type="button" class="btn btn-danger btn-lg btn-block" (click)="onDeleteProduct(product)">Delete</button>
                   </div>
                 </div>
-                <button type="button" *ngIf="authService.loggedIn() && !authService.userRole()" class="btn btn-dark btn-lg btn-block">Add to cart</button>
+                <button type="button" *ngIf="authService.loggedIn() && !authService.userRole()" class="btn btn-dark btn-lg btn-block" (click)="onAddProductToCart(product)">Add to cart</button>
               </div>
             </div>
           </div>

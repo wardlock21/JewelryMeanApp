@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from "../../services/auth.service";
 import { Router } from "@angular/router";
 import { FlashMessagesService } from 'angular2-flash-messages';
-import { OrderPipe } from 'ngx-order-pipe';
-
+import { ToastrService } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,8 +18,18 @@ export class DashboardComponent implements OnInit {
   pens: any = [];
   bracs: any = [];
   i: any;
+
+  name: String;
+  product_id:String;
+  img: String;
+  price: 350;
+  added: boolean;
+
+  
   constructor(private authService: AuthService,
-    private router: Router, private flashMessage: FlashMessagesService) { }
+    private router: Router, private flashMessage: FlashMessagesService,
+    private toastr: ToastrService) {
+     }
 
 
   ngOnInit() {
@@ -56,12 +66,29 @@ export class DashboardComponent implements OnInit {
   onDeleteProduct(product: any) {
     this.authService.deleteProduct(product._id).subscribe(data => {
       if (data.success) {
-        this.flashMessage.show('Successfully Deleted', { cssClass: 'alert-success', timeout: 3000 });
+        this.toastr.success('Successfully Deleted!', 'Delete!', {timeOut: 2000,});
         this.router.navigate(['/products']);
       } else {
-        this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
+        this.toastr.error('Something went wrong!', 'Error!', { timeOut: 2000, });
         this.router.navigate(['/products']);
       }
     });
   }
+
+  onAddProductToCart(product){
+    const item = {
+      name: product.name,
+      product_id: product._id,
+      img: product.img,
+      price: 350,
+      added: true,
+      quantity:1
+    }
+    this.authService.storeItemToOrder(item);
+    this.toastr.success('Item is Added to your Cartng!', 'Cart!',{
+      timeOut: 1000,
+    });
+   
+  }
+
 }

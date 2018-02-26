@@ -12,14 +12,17 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { OrderModule } from 'ngx-order-pipe';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr'; 
 import {ValidateService} from './services/validate.service';
 import {AuthService  } from "./services/auth.service";
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import { AuthGuard } from "./guards/auth.guard";
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+
 
 const appRoutes: Routes =  [
   {path:'', component: HomeComponent},
@@ -28,7 +31,9 @@ const appRoutes: Routes =  [
   {path:'products', component: DashboardComponent},
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
   { path: 'addproduct', component: AddProductComponent, canActivate: [AuthGuard] },
-  { path: 'editproduct', component: EditProductComponent, canActivate: [AuthGuard] }
+  { path: 'editproduct', component: EditProductComponent, canActivate: [AuthGuard]},
+  { path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard] },
+  { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard] }
 ]
 
 @NgModule({
@@ -41,7 +46,9 @@ const appRoutes: Routes =  [
     DashboardComponent,
     ProfileComponent,
     AddProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    ShoppingCartComponent,
+    CheckoutComponent
       ],
   imports: [
     BrowserModule,
@@ -50,7 +57,9 @@ const appRoutes: Routes =  [
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule.forRoot(),
     NgbModule.forRoot(),
-    OrderModule
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    
   ],
   providers: [ValidateService,AuthService,AuthGuard],
   bootstrap: [AppComponent]

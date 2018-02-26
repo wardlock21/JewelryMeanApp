@@ -10,6 +10,9 @@ export class AuthService {
   product:any;
   oldproduct:any;
   role:any;
+  iteml:any;
+  totall:any;
+  
     constructor(private http:Http)  { }
     registerUser(user){
       let headers=new Headers();
@@ -88,6 +91,29 @@ export class AuthService {
  
   }
 
+  storeItemToOrder(item:any){
+    
+    var tempItem = JSON.parse(localStorage.getItem("items"));
+    if (tempItem == null) tempItem = [];
+    localStorage.setItem("item", JSON.stringify(item));
+    tempItem.push(item);
+    localStorage.setItem("items", JSON.stringify(tempItem));
+
+  }
+ 
+
+  updateItemsInOrder(items:any){
+    localStorage.removeItem("items");
+    localStorage.setItem("items", JSON.stringify(items));
+  }
+  getOrderFromItems(){
+    return this.iteml = JSON.parse(localStorage.getItem("items"));
+  }
+
+  orderClear(){
+    localStorage.removeItem("items");
+    localStorage.removeItem("item");
+  }
   getProductData() {
     return this.oldproduct;
   } 
@@ -99,6 +125,29 @@ export class AuthService {
   
   loggedIn(){
     return tokenNotExpired('id_token');
+  }
+
+  getUser(){
+    return this.user;
+  }
+
+  getOrder(){
+    return this.iteml = JSON.parse(localStorage.getItem("items"));;
+  }
+  storeTotal(total:any){
+    this.totall=total;
+  }
+
+  getTotal(){
+    return this.totall;
+  }
+  itemslenth() {
+    var tempItem = JSON.parse(localStorage.getItem("items"));
+    if (tempItem.length > 0) {
+      return true;
+    }
+    else
+      return false;
   }
 
   userRole(){
