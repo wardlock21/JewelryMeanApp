@@ -1,32 +1,32 @@
 import { Injectable } from '@angular/core';
-import { Http,Headers } from "@angular/http";
+import { Http, Headers } from "@angular/http";
 import "rxjs/add/operator/map";
 import { tokenNotExpired } from 'angular2-jwt';
 
 @Injectable()
 export class AuthService {
-    authToken:any;
-    user:any;
-  product:any;
-  oldproduct:any;
-  role:any;
-  iteml:any;
-  totall:any;
-  
-    constructor(private http:Http)  { }
-    registerUser(user){
-      let headers=new Headers();
-      headers.append('Content-Type','application/json');
-      return this.http.post('users/register',user,{headers:headers})
-      .map(res=>res.json());
-    };
-  authenticateUser(user){
+  authToken: any;
+  user: any;
+  product: any;
+  oldproduct: any;
+  role: any;
+  iteml: any;
+  totall: any;
+
+  constructor(private http: Http) { }
+  registerUser(user) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('users/register', user, { headers: headers })
+      .map(res => res.json());
+  };
+  authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('users/authenticate', user, { headers: headers })
       .map(res => res.json());
   }
-  getProfile(){
+  getProfile() {
     let headers = new Headers();
     this.loadToken();
 
@@ -36,25 +36,25 @@ export class AuthService {
       .map(res => res.json());
   }
 
-  getProducts(){
+  getProducts() {
     let headers = new Headers();
-    
+
     headers.append('Content-Type', 'application/json');
     return this.http.get('users/product', { headers: headers })
       .map(res => res.json());
   }
 
-  addProduct(product){
+  addProduct(product) {
     let headers = new Headers();
     this.loadToken();
 
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.post('users/addproduct',product, { headers: headers })
+    return this.http.post('users/addproduct', product, { headers: headers })
       .map(res => res.json());
   }
 
-  editProduct(product){
+  editProduct(product) {
     let headers = new Headers();
     this.loadToken();
 
@@ -71,7 +71,7 @@ export class AuthService {
 
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.delete('users/deleteproduct/'+productID, { headers: headers })
+    return this.http.delete('users/deleteproduct/' + productID, { headers: headers })
       .map(res => res.json());
   }
 
@@ -81,18 +81,18 @@ export class AuthService {
     localStorage.setItem('id_token', token);
     localStorage.setItem('user', JSON.stringify(user));
     localStorage.setItem('role', user.role);
-    this.authToken= token;
-    this.user= user;
-    this.role=user.role;
+    this.authToken = token;
+    this.user = user;
+    this.role = user.role;
   }
 
-  storeProductData(product1:any){
+  storeProductData(product1: any) {
     this.oldproduct = product1;
- 
+
   }
 
-  storeItemToOrder(item:any){
-    
+  storeItemToOrder(item: any) {
+
     var tempItem = JSON.parse(localStorage.getItem("items"));
     if (tempItem == null) tempItem = [];
     localStorage.setItem("item", JSON.stringify(item));
@@ -100,45 +100,45 @@ export class AuthService {
     localStorage.setItem("items", JSON.stringify(tempItem));
 
   }
- 
 
-  updateItemsInOrder(items:any){
+
+  updateItemsInOrder(items: any) {
     localStorage.removeItem("items");
     localStorage.setItem("items", JSON.stringify(items));
   }
-  getOrderFromItems(){
+  getOrderFromItems() {
     return this.iteml = JSON.parse(localStorage.getItem("items"));
   }
 
-  orderClear(){
+  orderClear() {
     localStorage.removeItem("items");
     localStorage.removeItem("item");
   }
   getProductData() {
     return this.oldproduct;
-  } 
-
-  loadToken(){
-    const token=localStorage.getItem('id_token');
-    this.authToken=token;
   }
-  
-  loggedIn(){
+
+  loadToken() {
+    const token = localStorage.getItem('id_token');
+    this.authToken = token;
+  }
+
+  loggedIn() {
     return tokenNotExpired('id_token');
   }
 
-  getUser(){
+  getUser() {
     return this.user;
   }
 
-  getOrder(){
+  getOrder() {
     return this.iteml = JSON.parse(localStorage.getItem("items"));;
   }
-  storeTotal(total:any){
-    this.totall=total;
+  storeTotal(total: any) {
+    this.totall = total;
   }
 
-  getTotal(){
+  getTotal() {
     return this.totall;
   }
   itemslenth() {
@@ -150,15 +150,15 @@ export class AuthService {
       return false;
   }
 
-  userRole(){
+  userRole() {
     const role = localStorage.getItem('role');
-    if(role=='admin')
+    if (role == 'admin')
       return true;
-    else 
-        return false;
+    else
+      return false;
   }
 
-  logout(){
+  logout() {
     this.authToken = null;
     this.user = null;
     localStorage.clear();

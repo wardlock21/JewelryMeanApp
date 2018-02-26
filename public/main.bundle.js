@@ -80,14 +80,17 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__ = __webpack_require__("./src/app/components/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_dashboard_dashboard_component__ = __webpack_require__("./src/app/components/dashboard/dashboard.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__ = __webpack_require__("./src/app/components/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ngx_order_pipe__ = __webpack_require__("./node_modules/ngx-order-pipe/ngx-order-pipe.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_validate_service__ = __webpack_require__("./src/app/services/validate.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__ = __webpack_require__("./src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_add_product_add_product_component__ = __webpack_require__("./src/app/components/add-product/add-product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_edit_product_edit_product_component__ = __webpack_require__("./src/app/components/edit-product/edit-product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ngx_toastr__ = __webpack_require__("./node_modules/ngx-toastr/esm5/ngx-toastr.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_validate_service__ = __webpack_require__("./src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__ = __webpack_require__("./src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_add_product_add_product_component__ = __webpack_require__("./src/app/components/add-product/add-product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_edit_product_edit_product_component__ = __webpack_require__("./src/app/components/edit-product/edit-product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_shopping_cart_shopping_cart_component__ = __webpack_require__("./src/app/components/shopping-cart/shopping-cart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_checkout_checkout_component__ = __webpack_require__("./src/app/components/checkout/checkout.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -114,14 +117,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 var appRoutes = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__["a" /* HomeComponent */] },
     { path: 'register', component: __WEBPACK_IMPORTED_MODULE_9__components_register_register_component__["a" /* RegisterComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_8__components_login_login_component__["a" /* LoginComponent */] },
     { path: 'products', component: __WEBPACK_IMPORTED_MODULE_11__components_dashboard_dashboard_component__["a" /* DashboardComponent */] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'addproduct', component: __WEBPACK_IMPORTED_MODULE_18__components_add_product_add_product_component__["a" /* AddProductComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'editproduct', component: __WEBPACK_IMPORTED_MODULE_19__components_edit_product_edit_product_component__["a" /* EditProductComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__["a" /* AuthGuard */]] }
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'addproduct', component: __WEBPACK_IMPORTED_MODULE_19__components_add_product_add_product_component__["a" /* AddProductComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'editproduct', component: __WEBPACK_IMPORTED_MODULE_20__components_edit_product_edit_product_component__["a" /* EditProductComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'cart', component: __WEBPACK_IMPORTED_MODULE_21__components_shopping_cart_shopping_cart_component__["a" /* ShoppingCartComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'checkout', component: __WEBPACK_IMPORTED_MODULE_22__components_checkout_checkout_component__["a" /* CheckoutComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__["a" /* AuthGuard */]] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -136,19 +144,22 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__["a" /* HomeComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__["a" /* ProfileComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__components_add_product_add_product_component__["a" /* AddProductComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__components_edit_product_edit_product_component__["a" /* EditProductComponent */]
+                __WEBPACK_IMPORTED_MODULE_19__components_add_product_add_product_component__["a" /* AddProductComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_edit_product_edit_product_component__["a" /* EditProductComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__components_shopping_cart_shopping_cart_component__["a" /* ShoppingCartComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__components_checkout_checkout_component__["a" /* CheckoutComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
                 __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */].forRoot(appRoutes),
-                __WEBPACK_IMPORTED_MODULE_16_angular2_flash_messages__["FlashMessagesModule"].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_17_angular2_flash_messages__["FlashMessagesModule"].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_5__ng_bootstrap_ng_bootstrap__["a" /* NgbModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_13_ngx_order_pipe__["a" /* OrderModule */]
+                __WEBPACK_IMPORTED_MODULE_13__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_14_ngx_toastr__["a" /* ToastrModule */].forRoot(),
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_14__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_15__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_17__guards_auth_guard__["a" /* AuthGuard */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_15__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_16__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_18__guards_auth_guard__["a" /* AuthGuard */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -252,30 +263,31 @@ var AddProductComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/components/dashboard/dashboard.component.css":
+/***/ "./src/app/components/checkout/checkout.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ":root {\r\n    --jumbotron-padding-y: 3rem;\r\n}\r\n\r\n.jumbotron {\r\n    padding-top: var(--jumbotron-padding-y);\r\n    padding-bottom: var(--jumbotron-padding-y);\r\n    margin-bottom: 0;\r\n    background-color: #fff;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    .jumbotron {\r\n        padding-top: calc(var(--jumbotron-padding-y) * 2);\r\n        padding-bottom: calc(var(--jumbotron-padding-y) * 2);\r\n    }\r\n}\r\n\r\n.jumbotron p:last-child {\r\n    margin-bottom: 0;\r\n}\r\n\r\n.jumbotron-heading {\r\n    font-weight: 300;\r\n}\r\n\r\n.jumbotron .container {\r\n    max-width: 40rem;\r\n}\r\n\r\nfooter {\r\n    padding-top: 3rem;\r\n    padding-bottom: 3rem;\r\n}\r\n\r\nfooter p {\r\n    margin-bottom: .25rem;\r\n}\r\n\r\n.box-shadow {\r\n    -webkit-box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);\r\n            box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);\r\n}"
+module.exports = ""
 
 /***/ }),
 
-/***/ "./src/app/components/dashboard/dashboard.component.html":
+/***/ "./src/app/components/checkout/checkout.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"jumbotron text-center\">\n  <div class=\"container\">\n    <h1 class=\"jumbotron-heading\">Album example</h1>\n    <p class=\"lead text-muted\">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not\n      too short so folks don't simply skip over it entirely.</p>\n    <p>\n      <a class=\"btn btn-primary\" *ngIf=\"!authService.loggedIn()\" [routerLink]=\"['/register']\">Register</a>\n      <a class=\"btn btn-dark\" *ngIf=\"!authService.loggedIn()\" [routerLink]=\"['/login']\">Login</a>\n    </p>\n  </div>\n</section>\n<br>\n<div class=\"album py-5 bg-light\">\n  <div class=\"container\">\n    <div class=\"ring\">\n      <h2>Ring</h2>\n      <hr>\n      <div *ngIf=\"products\">\n        <div class=\"row \">\n          <div *ngFor=\"let product of rings \" class=\"col-md-4\">\n            <div class=\"card mb-4 box-shadow \">\n              <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"Card image cap\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">{{product.name}}</h5>\n                <p class=\"card-text\">{{product.description}}</p>\n                <button type=\"button\" *ngIf=\"!authService.loggedIn()\" class=\"btn btn-dark btn-lg btn-block\" [routerLink]=\"['/login']\">Shop</button>\n                <div class=\"row\" *ngIf=\"authService.loggedIn() && authService.userRole()\">\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" (click)=\"onEditProduct(product)\">Edit</button>\n                  </div>\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\" (click)=\"onDeleteProduct(product)\">Delete</button>\n                  </div>\n                </div>\n                <button type=\"button\" *ngIf=\"authService.loggedIn() && !authService.userRole()\" class=\"btn btn-dark btn-lg btn-block\">Add to cart</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"necklace\">\n      <h2>Necklace</h2>\n      <hr>\n      <div *ngIf=\"products\">\n        <div class=\"row \">\n          <div *ngFor=\"let product of necks\" class=\"col-md-4\">\n              <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"Card image cap\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">{{product.name}}</h5>\n                <p class=\"card-text\">{{product.description}}</p>\n                <button type=\"button\" *ngIf=\"!authService.loggedIn()\" class=\"btn btn-dark btn-lg btn-block\" [routerLink]=\"['/login']\">Shop</button>\n                <div class=\"row\" *ngIf=\"authService.loggedIn() && authService.userRole()\">\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" (click)=\"onEditProduct(product)\">Edit</button>\n                  </div>\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\" (click)=\"onDeleteProduct(product)\">Delete</button>\n                  </div>\n                </div>\n                <button type=\"button\" *ngIf=\"authService.loggedIn() && !authService.userRole()\" class=\"btn btn-dark btn-lg btn-block\">Add to cart</button>\n              </div>\n            </div>\n         \n        </div>\n      </div>\n    </div>\n    <div class=\"earring\">\n      <h2>Earring</h2>\n      <hr>\n      <div *ngIf=\"products\">\n        <div class=\"row \">\n          <div *ngFor=\"let product of ears\" class=\"col-md-4\">\n            <div class=\"card mb-4 box-shadow \">\n              <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"Card image cap\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">{{product.name}}</h5>\n                <p class=\"card-text\">{{product.description}}</p>\n                <button type=\"button\" *ngIf=\"!authService.loggedIn()\" class=\"btn btn-dark btn-lg btn-block\" [routerLink]=\"['/login']\">Shop</button>\n                <div class=\"row\" *ngIf=\"authService.loggedIn() && authService.userRole()\">\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" (click)=\"onEditProduct(product)\">Edit</button>\n                  </div>\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\" (click)=\"onDeleteProduct(product)\">Delete</button>\n                  </div>\n                </div>\n                <button type=\"button\" *ngIf=\"authService.loggedIn() && !authService.userRole()\" class=\"btn btn-dark btn-lg btn-block\">Add to cart</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"bracelets\">\n      <h2>Bracelets</h2>\n      <hr>\n      <div *ngIf=\"products\">\n        <div class=\"row \">\n          <div *ngFor=\"let product of bracs\" class=\"col-md-4\">\n            <div class=\"card mb-4 box-shadow \">\n              <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"Card image cap\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">{{product.name}}</h5>\n                <p class=\"card-text\">{{product.description}}</p>\n                <button type=\"button\" *ngIf=\"!authService.loggedIn()\" class=\"btn btn-dark btn-lg btn-block\" [routerLink]=\"['/login']\">Shop</button>\n                <div class=\"row\" *ngIf=\"authService.loggedIn() && authService.userRole()\">\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" (click)=\"onEditProduct(product)\">Edit</button>\n                  </div>\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\" (click)=\" onDeleteProduct(product)\">Delete</button>\n                  </div>\n                </div>\n                <button type=\"button\" *ngIf=\"authService.loggedIn() && !authService.userRole()\" class=\"btn btn-dark btn-lg btn-block\">Add to cart</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"pendants\">\n      <h2>Pendents</h2>\n      <hr>\n      <div *ngIf=\"products\">\n        <div class=\"row \">\n          <div *ngFor=\"let product of pens\" class=\"col-md-4 clearfix\">\n            <div class=\"card mb-4 box-shadow \">\n              <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"Card image cap\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">{{product.name}}</h5>\n                <p class=\"card-text\">{{product.description}}</p>\n                <button type=\"button\" *ngIf=\"!authService.loggedIn()\" class=\"btn btn-dark btn-lg btn-block\" [routerLink]=\"['/login']\">Shop</button>\n                <div class=\"row\" *ngIf=\"authService.loggedIn() && authService.userRole()\">\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button class=\"btn btn-primary btn-lg btn-block\" (click)=\"onEditProduct(product)\">Edit</button>\n                  </div>\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\" (click)=\"onDeleteProduct(product)\">Delete</button>\n                  </div>\n                </div>\n                <button type=\"button\" *ngIf=\"authService.loggedIn() && !authService.userRole()\" class=\"btn btn-dark btn-lg btn-block\">Add to cart</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col\">\n      <h4 class=\"mb-3\">Billing address</h4>\n      <form class=\"needs-validation\" novalidate>\n        <div class=\"row\">\n          <div class=\"col-md-6 mb-3\">\n            <label for=\"firstName\">First name</label>\n            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"firstName\" name=\"firstName\" placeholder=\"\" required>\n          </div>\n          <div class=\"col-md-6 mb-3\">\n            <label for=\"lastName\">Last name</label>\n            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"lastName\" name=\"lastName\" placeholder=\"\" required>\n          </div>\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"email\">Email\n            <span class=\"text-muted\">(Optional)</span>\n          </label>\n          <input type=\"email\" class=\"form-control\" id=\"email\" [(ngModel)]=\"email\" name=\"email\" placeholder=\"you@example.com\">\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"address\">Address</label>\n          <input type=\"text\" class=\"form-control\" id=\"address\" [(ngModel)]=\"Address\" name=\"Address\" placeholder=\"1234 Main St\" required>\n        </div>\n\n        <div class=\"mb-3\">\n          <label for=\"address2\">Address 2\n            <span class=\"text-muted\">(Optional)</span>\n          </label>\n          <input type=\"text\" class=\"form-control\" id=\"address2\" [(ngModel)]=\"address2\" name=\"address2\" placeholder=\"Apartment or suite\">\n        </div>\n\n        <div class=\"row\">\n          <div class=\"col-md-5 mb-3\">\n            <label for=\"State\">State</label>\n            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"state\" name=\"state\" placeholder=\"\" required>\n          </div>\n          <div class=\"col-md-4 mb-3\">\n            <label for=\"City\">City</label>\n            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"city\" name=\"city\" placeholder=\"\" required>\n          </div>\n          <div class=\"col-md-3 mb-3\">\n            <label for=\"zip\">Zip</label>\n            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"zip\" name=\"zip\" placeholder=\"\" required>\n          </div>\n        </div>\n        \n        <hr class=\"mb-4\">\n\n        <h4 class=\"mb-3\">Payment</h4>\n\n        <div class=\"d-block my-3\">\n          <div class=\"custom-control custom-radio\">\n            <input id=\"credit\" name=\"paymentMethod\" type=\"radio\" class=\"custom-control-input\" checked [(ngModel)]=\"paymentMethod\" required>\n            <label class=\"custom-control-label\" for=\"credit\">Credit card</label>\n          </div>\n          <div class=\"custom-control custom-radio\">\n            <input id=\"debit\" name=\"paymentMethod\" type=\"radio\" class=\"custom-control-input\" [(ngModel)]=\"paymentMethod\" required>\n            <label class=\"custom-control-label\" for=\"debit\">Debit card</label>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-md-6 mb-3\">\n            <label for=\"cc-name\">Name on card</label>\n            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"ccname\" name=\"ccname\" placeholder=\"\" required>\n            <small class=\"text-muted\">Full name as displayed on card</small>\n          </div>\n          <div class=\"col-md-6 mb-3\">\n            <label for=\"cc-number\">Credit/Debit card number</label>\n            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"ccnumber\" name=\"ccnumber\" placeholder=\"\" required>\n          </div>\n        </div>\n        <div class=\"row\">\n          <div class=\"col-md-3 mb-3\">\n            <label for=\"cc-expiration\">Expiration</label>\n            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"ccexpiration\" name=\"ccexpiration\" placeholder=\"\" required>\n          </div>\n          <div class=\"col-md-3 mb-3\">\n            <label for=\"cc-expiration\">CVV</label>\n            <input type=\"text\" class=\"form-control\" [(ngModel)]=\"cccvv\" name=\"cccvv\" placeholder=\"\" required>\n          </div>\n        </div>\n        <hr class=\"mb-4\">\n        <button class=\"btn btn-primary btn-lg btn-block\" type=\"button\" (click)=\"orderPlaced()\">Continue to checkout</button>\n      </form>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ "./src/app/components/dashboard/dashboard.component.ts":
+/***/ "./src/app/components/checkout/checkout.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckoutComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_validate_service__ = __webpack_require__("./src/app/services/validate.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -289,11 +301,107 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+var CheckoutComponent = /** @class */ (function () {
+    function CheckoutComponent(flashMessage, authService, router, validateService) {
+        this.flashMessage = flashMessage;
+        this.authService = authService;
+        this.router = router;
+        this.validateService = validateService;
+    }
+    CheckoutComponent.prototype.ngOnInit = function () {
+    };
+    CheckoutComponent.prototype.orderPlaced = function () {
+        var checkout = {
+            firstName: this.firstName,
+            lastName: this.lastName,
+            email: this.email,
+            Address: this.Address,
+            address2: this.address2,
+            state: this.state,
+            city: this.state,
+            zip: this.zip
+        };
+        var card = {
+            type: this.type,
+            ccname: this.ccname,
+            ccnumber: this.ccnumber,
+            ccexpiration: this.ccexpiration,
+            cccvv: this.cccvv
+        };
+        if (!this.validateService.validateCheckout(checkout)) {
+            this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
+            return false;
+        }
+        if (!this.validateService.validateCard(card)) {
+            this.flashMessage.show('Please fill all the card details', { cssClass: 'alert-danger', timeout: 3000 });
+            return false;
+        }
+        this.flashMessage.show('Your order is Placed', { cssClass: 'alert-success', timeout: 8000 });
+        this.authService.orderClear();
+        this.router.navigate(['/']);
+    };
+    CheckoutComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-checkout',
+            template: __webpack_require__("./src/app/components/checkout/checkout.component.html"),
+            styles: [__webpack_require__("./src/app/components/checkout/checkout.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"], __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_4__services_validate_service__["a" /* ValidateService */]])
+    ], CheckoutComponent);
+    return CheckoutComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/dashboard/dashboard.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ":root {\r\n    --jumbotron-padding-y: 3rem;\r\n}\r\n\r\n.jumbotron {\r\n    padding-top: var(--jumbotron-padding-y);\r\n    padding-bottom: var(--jumbotron-padding-y);\r\n    margin-bottom: 0;\r\n    background-color: #fff;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    .jumbotron {\r\n        padding-top: calc(var(--jumbotron-padding-y) * 2);\r\n        padding-bottom: calc(var(--jumbotron-padding-y) * 2);\r\n    }\r\n}\r\n\r\n.jumbotron p:last-child {\r\n    margin-bottom: 0;\r\n}\r\n\r\n.jumbotron-heading {\r\n    font-weight: 300;\r\n}\r\n\r\n.jumbotron .container {\r\n    max-width: 40rem;\r\n}\r\n\r\nfooter {\r\n    padding-top: 3rem;\r\n    padding-bottom: 3rem;\r\n}\r\n\r\nfooter p {\r\n    margin-bottom: .25rem;\r\n}\r\n\r\n.box-shadow {\r\n    -webkit-box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);\r\n            box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/components/dashboard/dashboard.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<section class=\"jumbotron text-center\">\n  <div class=\"container\">\n    <h1 class=\"jumbotron-heading\">Album example</h1>\n    <p class=\"lead text-muted\">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not\n      too short so folks don't simply skip over it entirely.</p>\n    <p>\n      <a class=\"btn btn-primary\" *ngIf=\"!authService.loggedIn()\" [routerLink]=\"['/register']\">Register</a>\n      <a class=\"btn btn-dark\" *ngIf=\"!authService.loggedIn()\" [routerLink]=\"['/login']\">Login</a>\n    </p>\n  </div>\n</section>\n<br>\n<div class=\"album py-5 bg-light\">\n  <div class=\"container\">\n    <div class=\"ring\">\n      <h2>Ring</h2>\n      <hr>\n      <div *ngIf=\"products\">\n        <div class=\"row \">\n          <div *ngFor=\"let product of rings \" class=\"col-md-4\">\n            <div class=\"card mb-4 box-shadow \">\n              <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"Card image cap\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">{{product.name}}</h5>\n                <p class=\"card-text\">{{product.description}}</p>\n                <button type=\"button\" *ngIf=\"!authService.loggedIn()\" class=\"btn btn-dark btn-lg btn-block\" [routerLink]=\"['/login']\">Shop</button>\n                <div class=\"row\" *ngIf=\"authService.loggedIn() && authService.userRole()\">\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" (click)=\"onEditProduct(product)\">Edit</button>\n                  </div>\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\" (click)=\"onDeleteProduct(product)\">Delete</button>\n                  </div>\n                </div>\n                <button type=\"button\" *ngIf=\"authService.loggedIn() && !authService.userRole()\" class=\"btn btn-dark btn-lg btn-block\" (click)=\"onAddProductToCart(product)\">Add to cart</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"necklace\">\n      <h2>Necklace</h2>\n      <hr>\n      <div *ngIf=\"products\">\n        <div class=\"row \">\n          <div *ngFor=\"let product of necks\" class=\"col-md-4\">\n            <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"Card image cap\">\n            <div class=\"card-body\">\n              <h5 class=\"card-title\">{{product.name}}</h5>\n              <p class=\"card-text\">{{product.description}}</p>\n              <button type=\"button\" *ngIf=\"!authService.loggedIn()\" class=\"btn btn-dark btn-lg btn-block\" [routerLink]=\"['/login']\">Shop</button>\n              <div class=\"row\" *ngIf=\"authService.loggedIn() && authService.userRole()\">\n                <div class=\"col-xs-12 col-md-6\">\n                  <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" (click)=\"onEditProduct(product)\">Edit</button>\n                </div>\n                <div class=\"col-xs-12 col-md-6\">\n                  <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\" (click)=\"onDeleteProduct(product)\">Delete</button>\n                </div>\n              </div>\n              <button type=\"button\" *ngIf=\"authService.loggedIn() && !authService.userRole()\" class=\"btn btn-dark btn-lg btn-block\" (click)=\"onAddProductToCart(product)\">Add to cart</button>\n            </div>\n          </div>\n\n        </div>\n      </div>\n    </div>\n    <div class=\"earring\">\n      <h2>Earring</h2>\n      <hr>\n      <div *ngIf=\"products\">\n        <div class=\"row \">\n          <div *ngFor=\"let product of ears\" class=\"col-md-4\">\n            <div class=\"card mb-4 box-shadow \">\n              <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"Card image cap\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">{{product.name}}</h5>\n                <p class=\"card-text\">{{product.description}}</p>\n                <button type=\"button\" *ngIf=\"!authService.loggedIn()\" class=\"btn btn-dark btn-lg btn-block\" [routerLink]=\"['/login']\">Shop</button>\n                <div class=\"row\" *ngIf=\"authService.loggedIn() && authService.userRole()\">\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" (click)=\"onEditProduct(product)\">Edit</button>\n                  </div>\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\" (click)=\"onDeleteProduct(product)\">Delete</button>\n                  </div>\n                </div>\n                <button type=\"button\" *ngIf=\"authService.loggedIn() && !authService.userRole()\" class=\"btn btn-dark btn-lg btn-block\" (click)=\"onAddProductToCart(product)\">Add to cart</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"bracelets\">\n      <h2>Bracelets</h2>\n      <hr>\n      <div *ngIf=\"products\">\n        <div class=\"row \">\n          <div *ngFor=\"let product of bracs\" class=\"col-md-4\">\n            <div class=\"card mb-4 box-shadow \">\n              <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"Card image cap\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">{{product.name}}</h5>\n                <p class=\"card-text\">{{product.description}}</p>\n                <button type=\"button\" *ngIf=\"!authService.loggedIn()\" class=\"btn btn-dark btn-lg btn-block\" [routerLink]=\"['/login']\">Shop</button>\n                <div class=\"row\" *ngIf=\"authService.loggedIn() && authService.userRole()\">\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-primary btn-lg btn-block\" (click)=\"onEditProduct(product)\">Edit</button>\n                  </div>\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\" (click)=\" onDeleteProduct(product)\">Delete</button>\n                  </div>\n                </div>\n                <button type=\"button\" *ngIf=\"authService.loggedIn() && !authService.userRole()\" class=\"btn btn-dark btn-lg btn-block\" (click)=\"onAddProductToCart(product)\">Add to cart</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"pendants\">\n      <h2>Pendents</h2>\n      <hr>\n      <div *ngIf=\"products\">\n        <div class=\"row \">\n          <div *ngFor=\"let product of pens\" class=\"col-md-4 clearfix\">\n            <div class=\"card mb-4 box-shadow \">\n              <img class=\"card-img-top\" src=\"{{product.img}}\" alt=\"Card image cap\">\n              <div class=\"card-body\">\n                <h5 class=\"card-title\">{{product.name}}</h5>\n                <p class=\"card-text\">{{product.description}}</p>\n                <button type=\"button\" *ngIf=\"!authService.loggedIn()\" class=\"btn btn-dark btn-lg btn-block\" [routerLink]=\"['/login']\">Shop</button>\n                <div class=\"row\" *ngIf=\"authService.loggedIn() && authService.userRole()\">\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button class=\"btn btn-primary btn-lg btn-block\" (click)=\"onEditProduct(product)\">Edit</button>\n                  </div>\n                  <div class=\"col-xs-12 col-md-6\">\n                    <button type=\"button\" class=\"btn btn-danger btn-lg btn-block\" (click)=\"onDeleteProduct(product)\">Delete</button>\n                  </div>\n                </div>\n                <button type=\"button\" *ngIf=\"authService.loggedIn() && !authService.userRole()\" class=\"btn btn-dark btn-lg btn-block\" (click)=\"onAddProductToCart(product)\">Add to cart</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/dashboard/dashboard.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__ = __webpack_require__("./node_modules/ngx-toastr/esm5/ngx-toastr.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
 var DashboardComponent = /** @class */ (function () {
-    function DashboardComponent(authService, router, flashMessage) {
+    function DashboardComponent(authService, router, flashMessage, toastr) {
         this.authService = authService;
         this.router = router;
         this.flashMessage = flashMessage;
+        this.toastr = toastr;
         this.rings = [];
         this.ears = [];
         this.necks = [];
@@ -336,13 +444,27 @@ var DashboardComponent = /** @class */ (function () {
         var _this = this;
         this.authService.deleteProduct(product._id).subscribe(function (data) {
             if (data.success) {
-                _this.flashMessage.show('Successfully Deleted', { cssClass: 'alert-success', timeout: 3000 });
+                _this.toastr.success('Successfully Deleted!', 'Delete!', { timeOut: 2000, });
                 _this.router.navigate(['/products']);
             }
             else {
-                _this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
+                _this.toastr.error('Something went wrong!', 'Error!', { timeOut: 2000, });
                 _this.router.navigate(['/products']);
             }
+        });
+    };
+    DashboardComponent.prototype.onAddProductToCart = function (product) {
+        var item = {
+            name: product.name,
+            product_id: product._id,
+            img: product.img,
+            price: 350,
+            added: true,
+            quantity: 1
+        };
+        this.authService.storeItemToOrder(item);
+        this.toastr.success('Item is Added to your Cartng!', 'Cart!', {
+            timeOut: 1000,
         });
     };
     DashboardComponent = __decorate([
@@ -352,7 +474,8 @@ var DashboardComponent = /** @class */ (function () {
             styles: [__webpack_require__("./src/app/components/dashboard/dashboard.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]])
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"],
+            __WEBPACK_IMPORTED_MODULE_4_ngx_toastr__["b" /* ToastrService */]])
     ], DashboardComponent);
     return DashboardComponent;
 }());
@@ -610,7 +733,7 @@ module.exports = ".btn btn-gray1{\r\n    background-color: #373a3c;\r\n}"
 /***/ "./src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark fixed-top\">\n  <a class=\"navbar-brand\" href=\"#\">MEAN App</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\"\n    aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/']\">Home\n          <span></span>\n        </a>\n      </li>\n    </ul>\n    <ul class=\"navbar-nav ml-auto\">\n      <li class=\"nav-item\" *ngIf=\"authSerivce.loggedIn() && authSerivce.userRole()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/addproduct']\">Add Product </a>\n      </li>\n      <li class=\"nav-item\"   [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/products']\">Products </a>\n      </li>\n      <li class=\"nav-item\"  *ngIf=\"authSerivce.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/profile']\">Profile </a>\n      </li>\n      <li class=\"nav-item\"  *ngIf=\"!authSerivce.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/login']\">Login </a>\n      </li>\n      <li class=\"nav-item\"  *ngIf=\"!authSerivce.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/register']\">Register</a>\n      </li>\n      <li class=\"nav-item\" *ngIf=\"authSerivce.loggedIn()\">\n        <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\n      </li>\n    </ul>\n  </div>\n</nav>\n<br>\n<br>\n"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark fixed-top\">\n  <a class=\"navbar-brand\" href=\"#\">MEAN App</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\"\n    aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n    <ul class=\"navbar-nav mr-auto\">\n      <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/']\">Home\n          <span></span>\n        </a>\n      </li>\n    </ul>\n    <ul class=\"navbar-nav ml-auto\">\n      <li class=\"nav-item\" *ngIf=\"authSerivce.loggedIn() && authSerivce.userRole()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/addproduct']\">Add Product </a>\n      </li>\n      <li class=\"nav-item\"   [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/products']\">Products </a>\n      </li>\n      <li class=\"nav-item\"  *ngIf=\"authSerivce.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/profile']\">Profile </a>\n      </li>\n      <li class=\"nav-item\" *ngIf=\"authSerivce.loggedIn() && !authSerivce.userRole()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/cart']\">Cart </a>\n      </li>\n      <li class=\"nav-item\"  *ngIf=\"!authSerivce.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/login']\">Login </a>\n      </li>\n      <li class=\"nav-item\"  *ngIf=\"!authSerivce.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/register']\">Register</a>\n      </li>\n      <li class=\"nav-item\" *ngIf=\"authSerivce.loggedIn()\">\n        <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\n      </li>\n    </ul>\n  </div>\n</nav>\n<br>\n<br>\n"
 
 /***/ }),
 
@@ -677,7 +800,7 @@ module.exports = ""
 /***/ "./src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n\n</div>\n"
+module.exports = "<div *ngIf=\"user\">\n  <h2 class=\"page-header\">\n    <strong>Name: </strong>{{user.name}}</h2>\n  <h2 class=\"page-header\">\n    <strong>Email: </strong>{{user.email}}</h2>\n</div>"
 
 /***/ }),
 
@@ -825,6 +948,106 @@ var RegisterComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/shopping-cart/shopping-cart.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ".table>tbody>tr>td,\r\n.table>tfoot>tr>td {\r\n    vertical-align: middle;\r\n}\r\n\r\n@media screen and (max-width: 600px) {\r\n    table#cart tbody td .form-control {\r\n        \r\n        display: inline !important;\r\n    }\r\n    .actions .btn {\r\n        width: 36%;\r\n        margin: 1.5em 0;\r\n    }\r\n    .actions .btn-info {\r\n        float: left;\r\n    }\r\n    .actions .btn-danger {\r\n        float: right;\r\n    }\r\n    table#cart thead {\r\n        display: none;\r\n    }\r\n    table#cart tbody td {\r\n        display: block;\r\n        padding: .6rem;\r\n        min-width: 320px;\r\n    }\r\n    table#cart tbody tr td:first-child {\r\n        background: #333;\r\n        color: #fff;\r\n    }\r\n    table#cart tbody td:before {\r\n        content: attr(data-th);\r\n        font-weight: bold;\r\n        display: inline-block;\r\n        width: 8rem;\r\n    }\r\n    table#cart tfoot td {\r\n        display: block;\r\n    }\r\n    table#cart tfoot td .btn {\r\n        display: block;\r\n    }\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/components/shopping-cart/shopping-cart.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n<h4 class=\"justify-content-between align-items-center mb-3\">\n  <span class=\"text-muted\">Your cart</span>\n  <span class=\"badge badge-secondary badge-pill\">{{totalitems}}</span>\n</h4>\n  <div class=\"row\">\n    <div class=\"col-sm-12 col-md-10 col-md-offset-1\">\n      <table class=\"table table-hover\">\n        <thead>\n          <tr>\n            <th >Product</th>\n            <th class=\"text-center\">Price</th>\n            <th> </th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let item of items; let i = index \" >\n            <td class=\"col-sm-8 col-md-6\">\n              <div class=\"media\">\n                <a class=\"thumbnail pull-left\" href=\"#\">\n                  <img class=\"media-object\" src=\"{{item.img}}\" style=\"width: 72px; height: 72px;\"> </a>\n                <div class=\"media-body\">\n                  <h4 class=\"media-heading \">{{item.name}}</h4>\n                </div>\n              </div>\n            </td>\n            <td class=\"col-sm-1 col-md-1 text-center\">\n              <strong>$350</strong>\n            </td>\n            <td class=\"col-sm-1 col-md-1\">\n              <button  class=\"btn btn-danger btn-sm\"(click)=\"removeProduct(i)\">\n                <span class=\"glyphicon glyphicon-remove\"></span> Remove\n              </button>\n            </td>\n          </tr>\n          <tr>\n            <td>   </td>\n            <td>\n              <h5>Subtotal</h5>\n            </td>\n            <td class=\"text-right\">\n              <h5>\n                <strong>${{subtotal}}</strong>\n              </h5>\n            </td>\n          </tr>\n          <tr>\n            <td>   </td>\n            <td>\n              <h5>Estimated shipping</h5>\n            </td>\n            <td class=\"text-right\">\n              <h5>\n                <strong>$6.94</strong>\n              </h5>\n            </td>\n          </tr>\n          <tr>\n            <td>   </td>\n            <td>\n              <h3>Total</h3>\n            </td>\n            <td class=\"text-right\">\n              <h3>\n                <strong>${{total}}</strong>\n              </h3>\n            </td>\n          </tr>\n          <tr>\n            <td>   </td>\n            <td>\n              <button  class=\"btn btn-default\" *ngIf=\"authService.loggedIn()\" [routerLink]=\"['/products']\">\n                <span class=\"glyphicon glyphicon-shopping-cart\"></span> Continue Shopping\n              </button>\n            </td>\n            <td>\n              <button type=\"button\" class=\"btn btn-success\" *ngIf=\"authService.itemslenth()\"(click)=\"checkout()\">\n                Checkout\n                <span class=\"glyphicon glyphicon-play\"></span>\n              </button>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/shopping-cart/shopping-cart.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShoppingCartComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ShoppingCartComponent = /** @class */ (function () {
+    function ShoppingCartComponent(authService, router, flashMessage) {
+        this.authService = authService;
+        this.router = router;
+        this.flashMessage = flashMessage;
+        this.quantity = 1;
+    }
+    ShoppingCartComponent.prototype.ngOnInit = function () {
+        this.items = this.authService.getOrderFromItems();
+        if (this.items == null) {
+            this.flashMessage.show('Please add some items to Cart', { cssClass: 'alert-danger', timeout: 2000 });
+            this.subtotal = 0;
+            this.total = 0;
+            this.totalitems = 0;
+        }
+        else {
+            this.totalitems = this.items.length;
+            this.subtotal = this.totalitems * 350;
+            this.total = this.subtotal + 6.94;
+        }
+    };
+    ShoppingCartComponent.prototype.removeProduct = function (i) {
+        if (i > -1) {
+            this.items.splice(i, 1);
+        }
+        this.totalitems = this.items.length;
+        this.subtotal = this.totalitems * 350;
+        this.total = this.subtotal + 6.94;
+        this.authService.updateItemsInOrder(this.items);
+        this.router.navigate(['/cart']);
+    };
+    ShoppingCartComponent.prototype.itemslenth = function () {
+        if (this.items.length == null || this.items.length == 0) {
+            return false;
+        }
+        else
+            return true;
+    };
+    ShoppingCartComponent.prototype.checkout = function () {
+        if (this.items.length == null || this.items.length == 0) {
+            this.flashMessage.show('Please add some items to Cart', { cssClass: 'alert-danger', timeout: 3000 });
+        }
+        else {
+            this.authService.storeTotal(this.total);
+            this.router.navigate(['/checkout']);
+        }
+    };
+    ShoppingCartComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-shopping-cart',
+            template: __webpack_require__("./src/app/components/shopping-cart/shopping-cart.component.html"),
+            styles: [__webpack_require__("./src/app/components/shopping-cart/shopping-cart.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]])
+    ], ShoppingCartComponent);
+    return ShoppingCartComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/guards/auth.guard.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -959,6 +1182,25 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.storeProductData = function (product1) {
         this.oldproduct = product1;
     };
+    AuthService.prototype.storeItemToOrder = function (item) {
+        var tempItem = JSON.parse(localStorage.getItem("items"));
+        if (tempItem == null)
+            tempItem = [];
+        localStorage.setItem("item", JSON.stringify(item));
+        tempItem.push(item);
+        localStorage.setItem("items", JSON.stringify(tempItem));
+    };
+    AuthService.prototype.updateItemsInOrder = function (items) {
+        localStorage.removeItem("items");
+        localStorage.setItem("items", JSON.stringify(items));
+    };
+    AuthService.prototype.getOrderFromItems = function () {
+        return this.iteml = JSON.parse(localStorage.getItem("items"));
+    };
+    AuthService.prototype.orderClear = function () {
+        localStorage.removeItem("items");
+        localStorage.removeItem("item");
+    };
     AuthService.prototype.getProductData = function () {
         return this.oldproduct;
     };
@@ -968,6 +1210,27 @@ var AuthService = /** @class */ (function () {
     };
     AuthService.prototype.loggedIn = function () {
         return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
+    };
+    AuthService.prototype.getUser = function () {
+        return this.user;
+    };
+    AuthService.prototype.getOrder = function () {
+        return this.iteml = JSON.parse(localStorage.getItem("items"));
+        ;
+    };
+    AuthService.prototype.storeTotal = function (total) {
+        this.totall = total;
+    };
+    AuthService.prototype.getTotal = function () {
+        return this.totall;
+    };
+    AuthService.prototype.itemslenth = function () {
+        var tempItem = JSON.parse(localStorage.getItem("items"));
+        if (tempItem.length > 0) {
+            return true;
+        }
+        else
+            return false;
     };
     AuthService.prototype.userRole = function () {
         var role = localStorage.getItem('role');
@@ -1028,7 +1291,27 @@ var ValidateService = /** @class */ (function () {
         }
     };
     ValidateService.prototype.validateEditProduct = function (product) {
-        if (product.name == undefined || product.img == undefined || product.description == undefined || product.Catag == undefined || product._id == undefined) {
+        if (product.name == undefined || product.img == undefined || product.description == undefined
+            || product.Catag == undefined || product._id == undefined) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    ValidateService.prototype.validateCheckout = function (chekcout) {
+        if (chekcout.firstName == undefined || chekcout.lastName == undefined || chekcout.email == undefined
+            || chekcout.Address == undefined || chekcout.state == undefined || chekcout.city == undefined
+            || chekcout.zip == undefined) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    ValidateService.prototype.validateCard = function (Card) {
+        if (Card.ccname == undefined || Card.ccnumber == undefined
+            || Card.ccexpiration == undefined || Card.cccvv == undefined) {
             return false;
         }
         else {
